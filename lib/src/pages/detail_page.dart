@@ -45,7 +45,7 @@ class _DetailPageState extends State<DetailPage> {
   @override
   Widget build(BuildContext context) {
     TextStyle titleStyle = TextStyles.title.copyWith(fontSize: 25).bold;
-    if (AppTheme.fullWidth(context) < 393) {
+    if (AppTheme.fullWidth(context) < 392) {
       titleStyle = TextStyles.title.copyWith(fontSize: 23).bold;
     }
     return Scaffold(

@@ -19,8 +19,8 @@ class _HomePageState extends State<HomePage> {
   List<DoctorModel> doctorDataList;
   @override
   void initState() {
-    doctorDataList = doctorMapList.map((x) => DoctorModel.fromJson(x)).toList();
-    super.initState();
+  doctorDataList = doctorMapList.map((x) => DoctorModel.fromJson(x)).toList();
+  super.initState();
   }
 
   Widget _appBar() {
@@ -36,7 +36,7 @@ class _HomePageState extends State<HomePage> {
         Icon(
           Icons.notifications_none,
           size: 30,
-          color: LightColor.grey,
+          color: LightColor.skyBlue,
         ),
         ClipRRect(
           borderRadius: BorderRadius.all(Radius.circular(13)),
@@ -46,7 +46,7 @@ class _HomePageState extends State<HomePage> {
             decoration: BoxDecoration(
               color: Theme.of(context).backgroundColor,
             ),
-            child: Image.asset("assets/user.png", fit: BoxFit.fill),
+            child: Image.asset("assets/logo.jpeg", fit: BoxFit.fill),
           ),
         ).p(8),
       ],
@@ -57,8 +57,8 @@ class _HomePageState extends State<HomePage> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        Text("Hello,", style: TextStyles.title.subTitleColor),
-        Text("Peter Parker", style: TextStyles.h1Style),
+        Text("Welcome", style: TextStyles.title.subTitleColor),
+        Text("Anugyatis", style: TextStyles.h1Style),
       ],
     ).p16;
   }
@@ -69,7 +69,7 @@ class _HomePageState extends State<HomePage> {
       margin: EdgeInsets.symmetric(horizontal: 16, vertical: 10),
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: Colors.white70,
         borderRadius: BorderRadius.all(Radius.circular(13)),
         boxShadow: <BoxShadow>[
           BoxShadow(
@@ -118,16 +118,14 @@ class _HomePageState extends State<HomePage> {
           child: ListView(
             scrollDirection: Axis.horizontal,
             children: <Widget>[
-              _categoryCard("Chemist & Drugist", "350 + Stores",
+              _categoryCard("Gyanecologist", "350 + Doctors",
                   color: LightColor.green, lightColor: LightColor.lightGreen),
-              _categoryCard("Covid - 19 Specialist", "899 Doctors",
+              _categoryCard("Dermatologist", "400 + Doctors",
                   color: LightColor.skyBlue, lightColor: LightColor.lightBlue),
-              _categoryCard("Cardiologists Specialist", "500 + Doctors",
+              _categoryCard("Dietician", "500 + Doctors",
                   color: LightColor.orange, lightColor: LightColor.lightOrange),
-              _categoryCard("Dermatologist", "300 + Doctors",
-                  color: LightColor.green, lightColor: LightColor.lightGreen),
-              _categoryCard("General Surgeon", "500 + Doctors",
-                  color: LightColor.skyBlue, lightColor: LightColor.lightBlue)
+
+
             ],
           ),
         ),
@@ -140,13 +138,14 @@ class _HomePageState extends State<HomePage> {
     TextStyle titleStyle = TextStyles.title.bold.white;
     TextStyle subtitleStyle = TextStyles.body.bold.white;
     if (AppTheme.fullWidth(context) < 392) {
+      style: TextStyle(fontSize: 200);
       titleStyle = TextStyles.body.bold.white;
       subtitleStyle = TextStyles.bodySm.bold.white;
     }
     return AspectRatio(
       aspectRatio: 6 / 8,
       child: Container(
-        height: 280,
+        height: 290,
         width: AppTheme.fullWidth(context) * .3,
         margin: EdgeInsets.only(left: 10, right: 10, bottom: 20, top: 10),
         decoration: BoxDecoration(

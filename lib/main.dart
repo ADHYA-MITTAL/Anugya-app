@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Health Care',
+      title: 'Welcome Anugyatis',
       theme: AppTheme.lightTheme,
       routes: Routes.getRoute(),
         onGenerateRoute: (settings) => Routes.onGenerateRoute(settings),
